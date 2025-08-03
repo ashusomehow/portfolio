@@ -201,38 +201,43 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
-// Mobile menu toggle (if needed for responsive design)
-function createMobileMenu() {
-    const nav = document.querySelector('.nav');
-    const header = document.querySelector('.header .container');
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-menu .nav-link');
     
-    if (window.innerWidth <= 768) {
-        const mobileMenuBtn = document.createElement('button');
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        mobileMenuBtn.className = 'mobile-menu-btn';
-        mobileMenuBtn.style.cssText = `
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        `;
-        
-        header.appendChild(mobileMenuBtn);
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
+    // Toggle mobile menu
+    mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // Close mobile menu when clicking on a link
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
         });
-        
-        // Show mobile menu button on small screens
-        if (window.innerWidth <= 768) {
-            mobileMenuBtn.style.display = 'block';
-            nav.style.display = 'none';
+    });
+    
+    // Close mobile menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+            mobileToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
         }
-    }
-}
-
-// Initialize mobile menu
-window.addEventListener('resize', createMobileMenu);
-createMobileMenu(); 
+    });
+    
+    // Close mobile menu on window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            mobileToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}); 
