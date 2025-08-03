@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashutosh Rai - Product Manager Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="portfolio-assets/Logo.png" alt="Z Logo">
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="subtitle">Building thoughtful products</p>
+                    <div class="hero-headline">
+                        <span class="small-text">Hi! I'm</span>
+                        <h1 class="main-title">Ashutosh Rai</h1>
+                    </div>
+                    <h2 class="role-title">Aspiring Product Manager</h2>
+                    <p class="current-role">Currently studying at <span class="company">@ IIT Guwahati</span> (Data Science & Artificial Intelligence)</p>
+                    <p class="about-text">
+                        I'm passionate about building simple, useful products that solve real user problems, 
+                        especially for Indian and Tier-2/3 markets. Focus on design, strategy, and user research.
+                    </p>
+                    <div class="hero-cta">
+                        <button class="cta-btn primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View Projects</button>
+                        <a href="https://drive.google.com/file/d/1fhZgxOeSnaUKg71rjG3jp-L_H-_RAqOn/view?usp=sharing" target="_blank" class="cta-btn secondary">Download Resume</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="avatar-container">
+                        <img src="portfolio-assets/Me.png" alt="Profile Photo" class="avatar">
+                        <div class="purple-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-me">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        Final-year student at IIT Guwahati enrolled in the Data Science & Artificial Intelligence program. 
+                        I have a strong interest in product strategy, user behavior, design thinking, and early-stage startups.
+                    </p>
+                    <p class="about-description">
+                        I love hackathons, rapid prototyping, and publicly sharing what I build. 
+                        My approach combines analytical thinking with creative problem-solving to create 
+                        products that truly serve user needs.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Hackathon Enthusiast</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Rapid Prototyping</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-share-alt"></i>
+                            <span>Build in Public</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-brain"></i>
+                            <span>AI & Data Science</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Product Strategy</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <span>User Research</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="featured-projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="product">Product</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="product design frontend">
+                    <div class="project-image">
+                        <img src="portfolio-assets/ravlo.png" alt="Ravlo Project">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Ravlo</h3>
+                        <p class="project-description">
+                            AI-powered LinkedIn content creation and formatting tool. Built with React, 
+                            Tailwind, TypeScript, and Google Gemini API.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Product</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                        <div class="project-role">
+                            <strong>My Role:</strong> PM, UI Design, Prompt Engineer
+                        </div>
+                        <a href="https://www.ravlo.pro" target="_blank" class="view-project-btn">View Live</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="product design frontend">
+                    <div class="project-image">
+                        <img src="portfolio-assets/cursory.png" alt="Cursory Project">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Cursory</h3>
+                        <p class="project-description">
+                            A curated course discovery platform with filters, dynamic cards, and clean UX. 
+                            Built with React, Tailwind, and glassmorphism UI.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Product</span>
+                            <span class="tag">Design</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                        <div class="project-role">
+                            <strong>My Role:</strong> PM, UI/UX, and Frontend Dev
+                        </div>
+                        <a href="https://cursory-landing.vercel.app/" target="_blank" class="view-project-btn">View Live</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="design frontend">
+                    <div class="project-image">
+                        <img src="portfolio-assets/Portfolio-1.png" alt="Syntra Project">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Syntra</h3>
+                        <p class="project-description">
+                            An AI-powered smart task manager that helps you improve your productivity. 
+                            Features intelligent task prioritization, automated scheduling, and smart insights.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Productivity</span>
+                            <span class="tag">Task Management</span>
+                        </div>
+                        <div class="project-role">
+                            <strong>My Role:</strong> Product Strategy, AI Integration, UX Design
+                        </div>
+                        <a href="#" class="view-project-btn">View Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Background Element -->
+    <div class="animated-bg">
+        <div class="orbiting-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- Skills & Tools Section -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Product</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">User Research</span>
+                        <span class="skill-item">Wireframing</span>
+                        <span class="skill-item">MVP Definition</span>
+                        <span class="skill-item">Roadmapping</span>
+                        <span class="skill-item">PRD Writing</span>
+                        <span class="skill-item">User Personas</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Design</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">UI/UX Principles</span>
+                        <span class="skill-item">Figma</span>
+                        <span class="skill-item">Canva</span>
+                        <span class="skill-item">Design Systems</span>
+                        <span class="skill-item">Component Libraries</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Development</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Tailwind CSS</span>
+                        <span class="skill-item">Vite</span>
+                        <span class="skill-item">TypeScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">AI & Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">ChatGPT</span>
+                        <span class="skill-item">Cursor AI</span>
+                        <span class="skill-item">Gemini API</span>
+                        <span class="skill-item">Notion</span>
+                        <span class="skill-item">FigJam</span>
+                        <span class="skill-item">Google Workspace</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Soft Skills</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Product Sense</span>
+                        <span class="skill-item">Storytelling</span>
+                        <span class="skill-item">Communication</span>
+                        <span class="skill-item">Hackathon Collaboration</span>
+                        <span class="skill-item">Problem Breakdown</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Product Thinking Section -->
+    <section class="product-thinking">
+        <div class="container">
+            <h2 class="section-title">Product Thinking</h2>
+            <p class="section-subtitle">Bite-sized articles and case notes on product frameworks, learnings, and insights</p>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <h3 class="blog-title">What most student products get wrong</h3>
+                        <p class="blog-excerpt">
+                            Exploring common pitfalls in student-built products and how to avoid them through 
+                            better user research and validation.
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-date">March 2024</span>
+                            <span class="blog-category">Product Strategy</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Lessons from building Cursory with just conversations + Figma</h3>
+                        <p class="blog-excerpt">
+                            How I validated and built a course discovery platform using only user conversations 
+                            and design prototypes.
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-date">February 2024</span>
+                            <span class="blog-category">Case Study</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <h3 class="blog-title">How I validate before I build</h3>
+                        <p class="blog-excerpt">
+                            My approach to product validation using frameworks like MVP, JTBD, and Kano model 
+                            before writing a single line of code.
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-date">January 2024</span>
+                            <span class="blog-category">Product Frameworks</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-text">
+                I'm always open to connecting, collaborating, or just jamming on product ideas. 
+                Whether you want to discuss a project, share insights, or explore opportunities, 
+                I'd love to hear from you!
+            </p>
+            <div class="contact-info">
+                <a href="mailto:aashutoshhrai.18@gmail.com" class="email">aashutoshhrai.18@gmail.com</a>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ashusomehow/" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/ashusomehow/" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://calendly.com/ashusomehow" target="_blank" class="social-icon" title="Calendly"><i class="fas fa-calendar"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
