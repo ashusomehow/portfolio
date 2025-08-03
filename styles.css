@@ -697,7 +697,8 @@ body {
         gap: 1rem;
     }
 
-    .z-symbol {
-        font-size: 8rem;
+    .orbiting-dots {
+        width: 200px;
+        height: 100px;
     }
 } 
